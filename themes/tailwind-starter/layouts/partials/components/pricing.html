@@ -16,7 +16,7 @@
         <div class="pt-24 flex flex-row">
             <!-- Basic Card -->
             <!-- StartUp Card -->
-            {{ range .Params.pricing_cards.cards }}
+            {{ range .cards }}
             {{ if (eq .type "bronze") }}
             <div class="w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125">
                 <h1 class="text-white font-semibold text-2xl">{{ .name }}</h1>

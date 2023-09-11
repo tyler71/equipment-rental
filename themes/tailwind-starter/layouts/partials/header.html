@@ -1,6 +1,6 @@
 <header class="mx-auto w-screen max-w-screen-2xl px-6 sm:px-7 xl:px-8 2xl:px-10 py-6">
     {{/* CSS functionality for menu toggle */}}
-    <style type="text/css">
+    <style>
         input#nav-toggle:checked~label#show-button {
             display: none;
         }
@@ -73,9 +73,9 @@
     </nav>
 
     <script>
-        var themeDarkIcon = document.getElementById("theme-toggle-dark");
-        var themeLightIcon = document.getElementById("theme-toggle-light");
-        var themeSystemIcon = document.getElementById("theme-toggle-system");
+        let themeDarkIcon = document.getElementById("theme-toggle-dark");
+        let themeLightIcon = document.getElementById("theme-toggle-light");
+        let themeSystemIcon = document.getElementById("theme-toggle-system");
 
         function setThemeVisibility(themeParameter) {
             switch (themeParameter) {

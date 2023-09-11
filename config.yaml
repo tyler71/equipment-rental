@@ -1,8 +1,8 @@
 theme: tailwind-starter
 languageCode: en-us
 baseurl: http://example.com/
-title: Hugo Tailwindcss Starter
-author: Dirk Olbrich
+title: TyDa Rentals
+author: Tyler
 copyright: Copyright © 2019-2023, Dirk Olbrich, all rights reserved.
 params:
   name: Hugo Tailwindcss Starter
@@ -11,6 +11,7 @@ params:
   github_repo: https://github.com/dirkolbrich/hugo-tailwindcss-starter-theme
   github_banner: true
   favicon: favicon.ico
+  footer_text: "Welcome to the site"
 markup:
   highlight:
     style: dracula

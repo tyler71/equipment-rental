@@ -1,5 +1,10 @@
 ---
+url: /
 title: "Candy Cart"
+hero:
+  title: "how are u"
+  subtitle: "Kljdfkdsjf dsjfldsk flksdjf"
+  image: 
 pricing_cards:
   title: Buy from us
   subtitle: "Why not"
@@ -20,9 +25,6 @@ pricing_cards:
       - Pickup now
     button_text: Hello
     button_link: aok
-hero_title: 
-hero_subtitle:
-hero_images:
 date: 2023-09-10T14:56:15-07:00
 draft: true
 ---
