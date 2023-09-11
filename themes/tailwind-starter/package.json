@@ -17,6 +17,7 @@
         "@tailwindcss/forms": "^0.x",
         "@tailwindcss/typography": "^0.5.x",
         "autoprefixer": "^10.x",
+        "daisyui": "^3.7.3",
         "postcss": "^8.x",
         "postcss-cli": "^10.x",
         "tailwindcss": "^3.x"
