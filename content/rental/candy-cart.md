@@ -4,7 +4,13 @@ title: "Candy Cart"
 hero:
   title: "how are u"
   subtitle: "Kljdfkdsjf dsjfldsk flksdjf"
-  image: 
+  images:
+    - url: "https://dummyimage.com/600x400/000/fff"
+      alt: al
+    - url: "https://dummyimage.com/600x400/000/fff"
+      alt: al
+    - url: "https://dummyimage.com/600x400/000/fff"
+      alt: al
 pricing_cards:
   title: Buy from us
   subtitle: "Why not"

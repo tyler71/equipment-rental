@@ -36,20 +36,15 @@
         </label>
 
         <ul id="nav-menu" class="sm:flex w-full sm:w-auto hidden mt-2 sm:mt-0 sm:space-x-2">
-            {{ with .Site.GetPage "/about" }}
-            <li>
-                <a href="{{ .Permalink }}" class="hover:text-sky-500 dark:hover:text-sky-500">{{ .Title }}</a>
-            </li>
-            {{ end }}
             {{ range .Site.Sections }}
             <li class="mr-4">
-                <a href="{{ .Permalink }}" class="hover:text-sky-500 dark:hover:text-sky-500">{{ .Title }}</a>
+                <a href="{{ .Permalink }}" class="hover:text-primary-color-action dark:hover:text-primary-color-action">{{ .Title }}</a>
             </li>
             {{ end }}
             <li>
                 <label class="sr-only">Theme</label>
                 <button type="button" id="theme-toogle" onclick="changeTheme()"
-                    class="py-1 hover:text-sky-500 dark:hover:text-sky-500">
+                    class="py-1 hover:text-primary-color-action dark:hover:text-primary-color-action">
                     <svg id="theme-toggle-dark" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 32 32"
                         xmlns="http://www.w3.org/2000/svg">
                         <circle cx="16" cy="16" r="15" />
