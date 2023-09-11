@@ -6,3 +6,9 @@ public/
 node_modules/
 
 **/_gen/*
+
+.idea
+
+.hugo_build.lock
+
+*.swp
