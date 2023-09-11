@@ -7,9 +7,9 @@
     <div class="">
         <div class="text-center font-semibold">
             <h1 class="text-5xl">
-                <span class="text-blue-700 tracking-wide">{{ .title }}</span>
+                <span class="text-primary-color tracking-wide">{{ .title }}</span>
             </h1>
-            <p class="pt-6 text-xl text-gray-400 font-normal w-full px-8 md:w-full">
+            <p class="pt-6 text-xl text-alt-color font-normal w-full px-8 md:w-full">
                 {{ .subtitle }}
             </p>
         </div>
@@ -38,7 +38,7 @@
                     </p>
                     {{ end }}
                     <a href="{{ default '#' .button_link }}" class="">
-                        <p class="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
+                        <p class="w-full py-4 bg-primary-color mt-8 rounded-xl text-white">
                                 <span class="font-medium">
                                     {{ .button_text }}
                                 </span>
@@ -49,7 +49,7 @@
                     </a>
                 </div>
                 <div class="absolute top-4 right-4">
-                    <p class="bg-blue-700 font-semibold px-4 py-1 rounded-full uppercase text-xs">Popular</p>
+                    <p class="bg-primary-color font-semibold px-4 py-1 rounded-full uppercase text-xs">Popular</p>
                 </div>
             </div>
             {{ else if (eq .type "silver") }}
@@ -74,7 +74,7 @@
                     {{ end }}
 
                     <a href="{{ default '#' .button_link }}" class="">
-                        <p class="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
+                        <p class="w-full py-4 bg-primary-color mt-8 rounded-xl text-white">
                                             <span class="font-medium">
                                                 {{ .button_text }}
                                             </span>

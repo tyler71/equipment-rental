@@ -7,7 +7,14 @@ module.exports = {
     "./content/**/*.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "primary-color": "var(--primary-color)",
+        "primary-color-action": "var(--primary-color-action)",
+        "alt-color": "var(--alt-color)",
+        "alt-color-action": "var(--alt-color-action)"
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),

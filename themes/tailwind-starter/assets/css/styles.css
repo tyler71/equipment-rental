@@ -5,6 +5,13 @@
 @tailwind utilities;
 @tailwind variants;
 
+:root {
+    --primary-color: green;
+    --primary-color-action: #00bd00;
+    --alt-color: blue;
+    --alt-color-action: #2424ff;
+}
+
 /* Site Specific */
 /* put site specific css styles here using the @layer directive */
 /* see https://tailwindcss.com/docs/functions-and-directives#layer */
