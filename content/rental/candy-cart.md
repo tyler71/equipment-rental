@@ -1,8 +1,11 @@
 ---
 url: /
 title: "Candy Cart"
+subtitle: "Kljdfkdsjf dsjfldsk flksdjf"
 hero:
-  subtitle: "Kljdfkdsjf dsjfldsk flksdjf"
+  image:
+    url: https://dummyimage.com/600x360
+    alt:
 images:
   - url: https://dummyimage.com/600x360
     subtitle: hi there
@@ -24,21 +27,32 @@ pricing_cards:
   subtitle: "Why not"
   cards:
   - name: Pickup
-    type: silver
+    subtitle: limba alpha ok telephone
+    type: themed
     price: 100
     price_per: h
     features:
       - Pickup now
-    button_text: Hello
-    button_link: aok
+      - Setup and teardown
   - name: Pickup
-    type: bronze
+    type: basic
     price: 100
     price_per: h
     features:
       - Pickup now
+steps:
+  image:
+    url: https://dummyimage.com/600x360
+    alt:
+  steps:
+  - text: Pick up
+    icon: shield
+  - text: Setup 
+    icon: shield
+  - text: Drop off
+    icon: shield
+  - text: Refund issued
+    icon: done
 date: 2023-09-10T14:56:15-07:00
 draft: true
 ---
-
-test

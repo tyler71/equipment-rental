@@ -1,76 +1,68 @@
 {{ with . }}
-
 {{ $feature_icon := "check" }}
-<div class="min-h-screen flex justify-center items-center">
-    <div class="">
-        <div class="text-center font-semibold">
-            <h1 class="text-5xl">
-                <span class="text-primary-color tracking-wide">{{ .title }}</span>
-            </h1>
-            <p class="pt-6 text-xl text-alt-color font-normal w-full px-8 md:w-full">
-                {{ .subtitle }}
-            </p>
+<section class="text-gray-600 body-font overflow-hidden">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-primary-color">{{ .Title }}</h1>
+            <p class="sm:text-xl text-lg font-medium title-font mb-2 text-gray-900">{{ .Subtitle }}</p>
         </div>
-        <div class="pt-24 flex flex-row">
-            <!-- Basic Card -->
-            <!-- StartUp Card -->
+        <div class="flex flex-wrap justify-center -m-4">
             {{ range .cards }}
-            {{ if (eq .type "bronze") }}
-            <div class="w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125">
-                <h1 class="text-white font-semibold text-2xl">{{ .name }}</h1>
-                <p class="pt-2 tracking-wide">
-                    <span class="text-gray-400 align-top">$ </span>
-                    <span class="text-3xl font-semibold">{{ .price }}</span>
-                    <span class="text-gray-400 font-medium">/ {{ .price_per }}</span>
-                </p>
-                <hr class="mt-4 border-1 border-gray-600">
-                <div class="pt-8">
+            {{ if (eq .type "basic") }}
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">{{ upper .name}}</h2>
+                    <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
+                        <span>${{ .price }}</span>
+                        <span class="text-lg ml-1 font-normal text-gray-500">/{{ .price_per }}</span>
+                    </h1>
                     {{ range .features }}
-                    <div class="flex items-center align-left font-semibold">
-                        <i data-feather="{{ $feature_icon }}"></i>
-                        <span class="pl-2 text-gray-400">{{ . }}</span>
-                    </div>
+                    <p class="flex items-center text-gray-600 mb-2">
+                        <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                            <i data-feather="{{ $feature_icon }}"></i>
+                        </span>
+                        <span>{{ . }}</span>
+                    </p>
                     {{ end }}
+                    <button class="flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">
+                        Button
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                             stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3">{{ default "ㅤ" .subtitle }}</p>
                 </div>
-                <a href="{{ default '#' .button_link }}" class="">
-                    <p class="flex justify-center w-full py-4 bg-primary-color mt-8 rounded-xl text-white">
-                        <span class="font-medium">{{ default "Click" .button_text }}</span>
-                        <i class="ml-2" data-feather="arrow-right"></i>
+            </div>
+            {{ else if (eq .type "themed") }}
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                <div class="h-full p-6 rounded-lg border-2 border-primary-color flex flex-col relative overflow-hidden">
+                    <span class="bg-primary-color text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">POPULAR</span>
+                    <h2 class="text-sm tracking-widest title-font mb-1 font-medium">{{ upper .name }}</h2>
+                    <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
+                        <span>${{ .price }}</span>
+                        <span class="text-lg ml-1 font-normal text-gray-500">/{{ .price_per }}</span>
+                    </h1>
+                    {{ range .features }}
+                    <p class="flex items-center text-gray-600 mb-2">
+                        <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-primary-color text-white rounded-full flex-shrink-0">
+                            <i data-feather="{{ $feature_icon }}"></i></span>
+                        <span>{{ . }}</span>
                     </p>
-                </a>
-            </div>
-            <div class="absolute top-4 right-4">
-                <p class="bg-primary-color font-semibold px-4 py-1 rounded-full uppercase text-xs">Popular</p>
-            </div>
-        </div>
-        {{ else if (eq .type "silver") }}
-        <div class="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl">
-            <h1 class="text-black font-semibold text-2xl">{{ .name }}</h1>
-            <p class="pt-2 tracking-wide">
-                <span class="text-gray-400 align-top">$ </span>
-                <span class="text-3xl font-semibold">{{ .price }}</span>
-                <span class="text-gray-400 font-medium">/ {{ .price_per }}</span>
-            </p>
-            <hr class="mt-4 border-1">
-            <div class="pt-8">
-                {{ range .features }}
-                <div class="flex items-center align-left font-semibold text-gray-400">
-                    <i data-feather="{{ $feature_icon }}"></i>
-                    <span class="pl-2">{{ . }}</span>
+                    {{ end }}
+                    <button class="flex items-center mt-auto text-white bg-primary-color border-0 py-2 px-4 w-full focus:outline-none hover:bg-primary-color-action rounded">
+                        Button
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                             stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3">{{ .subtitle }}</p>
                 </div>
-                {{ end }}
-
-                <a href="{{ default '#' .button_link }}" class="">
-                    <p class="flex justify-center w-full py-4 bg-primary-color mt-8 rounded-xl text-white">
-                        <span class="font-medium">{{ default "Click" .button_text }}</span>
-                        <i class="ml-2" data-feather="arrow-right"></i>
-                    </p>
-                </a>
             </div>
+            {{ end }}
+            {{ end }}
         </div>
-        {{ end }}
-        {{ end }}
     </div>
-</div>
-</div>
+</section>
 {{ end }}

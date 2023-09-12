@@ -11,7 +11,7 @@
                 <div class="flex mb-4">
                     <a class="flex-grow text-primary-color border-b-2 border-primary-color py-2 text-lg px-1">Starting From</a>
                 </div>
-                <p class="leading-relaxed mb-4">{{ .Params.hero.subtitle | .RenderString }}</p>
+                <p class="leading-relaxed mb-4">{{ .Params.subtitle | .RenderString }}</p>
                 {{/* Get the price for the first card. We're looking for the "starting from" price */}}
                 {{ range (first 1 .Params.pricing_cards.cards) }}
                 {{ $.Page.Store.Set "price" .price }}
@@ -33,10 +33,8 @@
 <!--                    </button>-->
                 </div>
             </div>
-            {{ with .Params.images }}
-            {{ range (first 1 .) }}
+            {{ with .Params.hero.image }}
                 <img alt="{{ default "product image" .alt }}" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{ .url }}">
-            {{ end }}
             {{ end }}
 
         </div>

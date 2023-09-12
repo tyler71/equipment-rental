@@ -1,5 +1,15 @@
 {
+  "name": "equipment_rental",
+  "version": "1.0.0",
+  "description": "Website for Equipment Rentals and others",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ci": "npm install && cd themes/tailwind-starter && npm install"
+  },
   "dependencies": {
     "postcss-cli": "^10.1.0"
-  }
+  },
+  "author": "Tyler",
+  "license": "ISC"
 }
