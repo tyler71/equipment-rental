@@ -41,6 +41,7 @@
                 <a href="{{ .Permalink }}" class="hover:text-primary-color-action dark:hover:text-primary-color-action">{{ .Title }}</a>
             </li>
             {{ end }}
+            {{ if eq .Site.Params.enableDarkToggle true }}
             <li>
                 <label class="sr-only">Theme</label>
                 <button type="button" id="theme-toogle" onclick="changeTheme()"
@@ -64,6 +65,7 @@
                     </svg>
                 </button>
             </li>
+            {{ end }}
         </ul>
     </nav>
 

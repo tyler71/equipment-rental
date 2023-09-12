@@ -7,6 +7,7 @@ copyright: Copyright © 2019-2023, Dirk Olbrich, all rights reserved.
 params:
   name: Hugo Tailwindcss Starter
   description: A simple bootstraped theme for Hugo, build with Tailwindcss.
+  enableDarkToggle: false
   github_user: dirkolbrich
   github_repo: https://github.com/dirkolbrich/hugo-tailwindcss-starter-theme
   github_banner: true

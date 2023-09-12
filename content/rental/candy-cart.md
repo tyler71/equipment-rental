@@ -5,11 +5,9 @@ hero:
   title: "how are u"
   subtitle: "Kljdfkdsjf dsjfldsk flksdjf"
   images:
-    - url: "https://dummyimage.com/600x400/000/fff"
+    - url: "https://flowbite.com/docs/images/carousel/carousel-2.svg"
       alt: al
-    - url: "https://dummyimage.com/600x400/000/fff"
-      alt: al
-    - url: "https://dummyimage.com/600x400/000/fff"
+    - url: "https://flowbite.com/docs/images/carousel/carousel-4.svg"
       alt: al
 pricing_cards:
   title: Buy from us
