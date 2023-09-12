@@ -1,8 +1,6 @@
 {{ with . }}
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{{ $feature_icon := "check" }}
 <div class="min-h-screen flex justify-center items-center">
     <div class="">
         <div class="text-center font-semibold">
@@ -28,66 +26,51 @@
                 <hr class="mt-4 border-1 border-gray-600">
                 <div class="pt-8">
                     {{ range .features }}
-                    <p class="font-semibold text-gray-400 text-left">
-                            <span class="material-icons align-middle">
-                                done
-                            </span>
-                        <span class="pl-2">
-                                {{ . | $.Page.RenderString }}
-                            </span>
-                    </p>
+                    <div class="flex items-center align-left font-semibold">
+                        <i data-feather="{{ $feature_icon }}"></i>
+                        <span class="pl-2 text-gray-400">{{ . }}</span>
+                    </div>
                     {{ end }}
-                    <a href="{{ default '#' .button_link }}" class="">
-                        <p class="w-full py-4 bg-primary-color mt-8 rounded-xl text-white">
-                                <span class="font-medium">
-                                    {{ .button_text }}
-                                </span>
-                            <span class="pl-2 material-icons align-middle text-sm">
-                                    east
-                                </span>
-                        </p>
-                    </a>
                 </div>
-                <div class="absolute top-4 right-4">
-                    <p class="bg-primary-color font-semibold px-4 py-1 rounded-full uppercase text-xs">Popular</p>
-                </div>
-            </div>
-            {{ else if (eq .type "silver") }}
-            <div class="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl">
-                <h1 class="text-black font-semibold text-2xl">{{ .name }}</h1>
-                <p class="pt-2 tracking-wide">
-                    <span class="text-gray-400 align-top">$ </span>
-                    <span class="text-3xl font-semibold">{{ .price }}</span>
-                    <span class="text-gray-400 font-medium">/ {{ .price_per }}</span>
-                </p>
-                <hr class="mt-4 border-1">
-                <div class="pt-8">
-                    {{ range .features }}
-                    <p class="font-semibold text-gray-400 text-left">
-                                        <span class="material-icons align-middle">
-                                            done
-                                        </span>
-                        <span class="pl-2">
-                                            {{ . }}
-                                        </span>
+                <a href="{{ default '#' .button_link }}" class="">
+                    <p class="flex justify-center w-full py-4 bg-primary-color mt-8 rounded-xl text-white">
+                        <span class="font-medium">{{ default "Click" .button_text }}</span>
+                        <i class="ml-2" data-feather="arrow-right"></i>
                     </p>
-                    {{ end }}
-
-                    <a href="{{ default '#' .button_link }}" class="">
-                        <p class="w-full py-4 bg-primary-color mt-8 rounded-xl text-white">
-                                            <span class="font-medium">
-                                                {{ .button_text }}
-                                            </span>
-                            <span class="pl-2 material-icons align-middle text-sm">
-                                                east
-                                            </span>
-                        </p>
-                    </a>
-                </div>
+                </a>
             </div>
-            {{ end }}
-            {{ end }}
+            <div class="absolute top-4 right-4">
+                <p class="bg-primary-color font-semibold px-4 py-1 rounded-full uppercase text-xs">Popular</p>
+            </div>
         </div>
+        {{ else if (eq .type "silver") }}
+        <div class="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl">
+            <h1 class="text-black font-semibold text-2xl">{{ .name }}</h1>
+            <p class="pt-2 tracking-wide">
+                <span class="text-gray-400 align-top">$ </span>
+                <span class="text-3xl font-semibold">{{ .price }}</span>
+                <span class="text-gray-400 font-medium">/ {{ .price_per }}</span>
+            </p>
+            <hr class="mt-4 border-1">
+            <div class="pt-8">
+                {{ range .features }}
+                <div class="flex items-center align-left font-semibold text-gray-400">
+                    <i data-feather="{{ $feature_icon }}"></i>
+                    <span class="pl-2">{{ . }}</span>
+                </div>
+                {{ end }}
+
+                <a href="{{ default '#' .button_link }}" class="">
+                    <p class="flex justify-center w-full py-4 bg-primary-color mt-8 rounded-xl text-white">
+                        <span class="font-medium">{{ default "Click" .button_text }}</span>
+                        <i class="ml-2" data-feather="arrow-right"></i>
+                    </p>
+                </a>
+            </div>
+        </div>
+        {{ end }}
+        {{ end }}
     </div>
+</div>
 </div>
 {{ end }}
