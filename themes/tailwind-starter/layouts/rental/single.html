@@ -10,8 +10,8 @@
         </div>
     </section>
 {{ end }}
-{{ partial "components/images.html" . }}
-{{ partial "components/pricing.html" . }}
+{{ partial "components/images.html" .Params.images }}
+{{ partial "components/pricing.html" .Params.pricing_cards }}
 {{ partial "components/rental.html" . }}
 </article>
 {{ end }}

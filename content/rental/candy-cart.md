@@ -2,13 +2,23 @@
 url: /
 title: "Candy Cart"
 hero:
-  title: "how are u"
   subtitle: "Kljdfkdsjf dsjfldsk flksdjf"
-  images:
-    - url: "https://flowbite.com/docs/images/carousel/carousel-2.svg"
-      alt: al
-    - url: "https://flowbite.com/docs/images/carousel/carousel-4.svg"
-      alt: al
+images:
+  - url: https://dummyimage.com/600x360
+    subtitle: hi there
+    title: more content
+    text: |
+      how are you I'm awesome I hope you enjoy thi day of full amounts of content
+  - url: https://dummyimage.com/600x360
+  - url: https://dummyimage.com/600x360
+  - url: https://dummyimage.com/600x360
+  - url: https://dummyimage.com/600x360
+  - url: https://dummyimage.com/600x360
+  - url: https://dummyimage.com/600x360
+  - url: https://dummyimage.com/600x360
+  - url: https://dummyimage.com/600x360
+  - url: https://dummyimage.com/600x360
+  - url: https://dummyimage.com/600x360
 pricing_cards:
   title: Buy from us
   subtitle: "Why not"
@@ -27,8 +37,6 @@ pricing_cards:
     price_per: h
     features:
       - Pickup now
-    button_text: Hello
-    button_link: aok
 date: 2023-09-10T14:56:15-07:00
 draft: true
 ---

@@ -6,14 +6,16 @@
         <div class="lg:w-4/5 mx-auto flex flex-wrap">
             <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
                 <h2 class="text-sm title-font text-gray-500 tracking-widest">rental</h2>
-                <h1 class="text-gray-900 text-3xl title-font font-medium mb-4"><a href="{{ .RelPermalink }}">{{ .Params.hero.title }}</a></h1>
+                <h1 class="text-gray-900 text-3xl title-font font-medium mb-4"><a href="{{ .RelPermalink }}">{{ .Params.title | title }}</a></h1>
 
                 <div class="flex mb-4">
                     <a class="flex-grow text-primary-color border-b-2 border-primary-color py-2 text-lg px-1">Starting From</a>
                 </div>
-                <p class="leading-relaxed mb-4">{{ .Params.hero.subtitle }}</p>
+                <p class="leading-relaxed mb-4">{{ .Params.hero.subtitle | .RenderString }}</p>
+                {{/* Get the price for the first card. We're looking for the "starting from" price */}}
                 {{ range (first 1 .Params.pricing_cards.cards) }}
                 {{ $.Page.Store.Set "price" .price }}
+                {{ $.Page.Store.Set "price_per" .price_per }}
                 {{ range .features }}
                 <div class="flex border-t border-gray-200 py-2">
                     <span class="text-gray-500">
@@ -23,8 +25,8 @@
                 </div>
                 {{ end }}
                 {{ end }}
-                <div class="flex">
-                    <span class="title-font font-medium text-2xl text-gray-900">${{ $.Page.Store.Get "price" }}/h</span>
+                <div class="flex mt-2">
+                    <span class="title-font font-medium text-2xl text-gray-900">${{ $.Page.Store.Get "price" }}/{{ $.Page.Store.Get "price_per" }}</span>
                     <button class="flex ml-auto text-white bg-primary-color border-0 py-2 px-6 focus:outline-none hover:bg-primary-color rounded"><a href="{{ .RelPermalink }}#rent">Rent Now</a></button>
 <!--                    <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">-->
 <!--                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">-->
@@ -33,7 +35,7 @@
 <!--                    </button>-->
                 </div>
             </div>
-            {{ with .Params.hero.images }}
+            {{ with .Params.images }}
             {{ range (first 1 .) }}
                 <img alt="{{ default "product image" .alt }}" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{ .url }}">
             {{ end }}
