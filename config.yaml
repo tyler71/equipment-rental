@@ -13,6 +13,9 @@ params:
   github_banner: true
   favicon: favicon.ico
   footer_text: "Welcome to the site"
+  matomo:
+    url: https://track.xyzz.work
+    id: 9
 markup:
   highlight:
     style: dracula

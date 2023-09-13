@@ -4,7 +4,7 @@ title: "Candy Cart"
 subtitle: "Kljdfkdsjf dsjfldsk flksdjf"
 hero:
   image:
-    url: https://dummyimage.com/600x360
+    url: https://filedn.com/l5SzCXYrh91L7rbnO6WkPgF/HRraBa3oIoKUk4klDdq7/images/generic/Online%20Shopping.svg
     alt:
 images:
   - url: https://dummyimage.com/600x360
