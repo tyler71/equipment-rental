@@ -5,7 +5,9 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ci": "npm install && cd themes/tailwind-starter && npm install"
+    "ci": "npm install && cd themes/tailwind-starter && npm install",
+    "start": "hugo serve",
+    "drafts": "hugo serve --buildDrafts"
   },
   "dependencies": {
     "postcss-cli": "^10.1.0"

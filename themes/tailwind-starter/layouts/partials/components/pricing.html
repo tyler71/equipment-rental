@@ -1,13 +1,13 @@
 {{ with . }}
 {{ $feature_icon := "check" }}
-<section class="text-gray-600 body-font overflow-hidden">
+<section id="pricing" class="text-gray-600 body-font overflow-hidden">
     <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-col text-center w-full mb-20">
-            <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-primary-color">{{ .Title }}</h1>
+            <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-primary-color">{{ title .Title }}</h1>
             <p class="sm:text-xl text-lg font-medium title-font mb-2 text-gray-900">{{ .Subtitle }}</p>
         </div>
         <div class="flex flex-wrap justify-center -m-4">
-            {{ range .cards }}
+            {{ range .options }}
             {{ if (eq .type "basic") }}
             <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
                 <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
@@ -21,16 +21,16 @@
                         <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
                             <i data-feather="{{ $feature_icon }}"></i>
                         </span>
-                        <span>{{ . }}</span>
+                        <span>{{ markdownify . }}</span>
                     </p>
                     {{ end }}
-                    <button class="flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">
-                        Button
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                             stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
+<!--                    <button class="flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">-->
+<!--                        Button-->
+<!--                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"-->
+<!--                             stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">-->
+<!--                            <path d="M5 12h14M12 5l7 7-7 7"></path>-->
+<!--                        </svg>-->
+<!--                    </button>-->
                     <p class="text-xs text-gray-500 mt-3">{{ default "ㅤ" .subtitle }}</p>
                 </div>
             </div>
@@ -50,13 +50,13 @@
                         <span>{{ . }}</span>
                     </p>
                     {{ end }}
-                    <button class="flex items-center mt-auto text-white bg-primary-color border-0 py-2 px-4 w-full focus:outline-none hover:bg-primary-color-action rounded">
-                        Button
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                             stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
+<!--                    <button class="flex items-center mt-auto text-white bg-primary-color border-0 py-2 px-4 w-full focus:outline-none hover:bg-primary-color-action rounded">-->
+<!--                        Button-->
+<!--                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"-->
+<!--                             stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">-->
+<!--                            <path d="M5 12h14M12 5l7 7-7 7"></path>-->
+<!--                        </svg>-->
+<!--                    </button>-->
                     <p class="text-xs text-gray-500 mt-3">{{ .subtitle }}</p>
                 </div>
             </div>
