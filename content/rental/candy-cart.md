@@ -28,7 +28,7 @@ steps:
   - text: We'll contact you to finalize any details
     icon: mail
   - text: We deliver and setup
-    icon: arrow-right
+    icon: truck
   - text: Party!
     icon: users
   - text: We'll come and pick it up
