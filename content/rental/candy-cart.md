@@ -2,7 +2,7 @@
 draft: false
 date: 2023-09-10T14:56:15-07:00
 url: /
-title: "Candy Cart"
+title: 'Candy Cart<span class="text-primary-color-600 dark:text-primary-color-500"> now</span>!'
 subtitle: |
   Rent this cart from us because we paid money for it  
   It's valuable and I need to use space
@@ -19,9 +19,6 @@ images:
   - url: https://dummyimage.com/600x360
   - url: https://dummyimage.com/600x360
 steps:
-  image:
-    url: https://dummyimage.com/600x360
-    alt:
   steps:
   - text: Book your event with us
     icon: user-plus
@@ -34,22 +31,28 @@ steps:
   - text: We'll come and pick it up
     icon: check
 pricing:
-  title: No frills to all the extras
+  title: |
+    No frills   
+    to all the extras
   subtitle: "Why not"
   options:
     - name: Just the cart
-      subtitle: limba alpha ok telephone
       type: basic
       price: 100
       price_per: h
       features:
-        - Delivery & Setup
+        available:
+          - Dessert cart trays
+        not_available:
+          - Candy
     - name: Dessert Cart
-      subtitle: Heyo
       type: themed
       price: 100
       price_per: h
       features:
-        - Just the Cart Plus +
-        - Dessert cart trays
+        available:
+          - Dessert cart trays
+        not_available:
+          - Lemons
+            
 ---

@@ -11,8 +11,8 @@ module.exports = {
       colors: {
         "primary-color": "var(--primary-color)",
         "primary-color-action": "var(--primary-color-action)",
-        "alt-color": "var(--alt-color)",
-        "alt-color-action": "var(--alt-color-action)"
+        "secondary-color": "var(--secondary-color)",
+        "secondary-color-action": "var(--secondary-color-action)"
       }
     },
   },

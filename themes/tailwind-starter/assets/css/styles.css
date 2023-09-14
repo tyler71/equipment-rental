@@ -8,8 +8,8 @@
 :root {
     --primary-color: green;
     --primary-color-action: #00bd00;
-    --alt-color: blue;
-    --alt-color-action: #2424ff;
+    --secondary-color: blue;
+    --secondary-color-action: #2424ff;
 }
 
 /* Site Specific */
@@ -19,4 +19,13 @@
     .welcome-headline {
         @apply text-sky-600;
     }
+}
+
+.size-18 {
+    width: 16px;
+    height: 16px;
+}
+.size-20 {
+    width: 20px;
+    height: 20px;
 }
